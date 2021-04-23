@@ -1,0 +1,7 @@
+.dayOfWeek{
+    width: 300px;
+    height: 300px;
+}
+.fiveDay div{
+float: left;
+}
