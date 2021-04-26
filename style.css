@@ -1,17 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.todayForcast{
+    padding-top: 100px;
+    padding-right: 300px;
+}
 .dayOfWeek{
     width: 200px;
     height: 350px;
 }
-.fiveDay div{
+.today div{
     float: left;
     padding-left: 30px;
 }
+.blue{
+    color: rgb(22, 97, 167);
+}
+.white{
+    color: floralwhite;
+}
+.fiveDay div{
+    float: left;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+.todayForcast div{
+float: left;
+}
 .hourlyForcast div{
     float: left;
+    padding-left: 50px;
+    padding-top: 40px;
 }
 .fiveDay{
-    height: 350px;
+    height: 340px;
+}
+.today{
+height: 700px;
+}
+#todayImg{
+width: 200px;
+height: 100px;
+}
+.sumPostToday{
+    width: 200px;
+    height: 50px;
+    padding-top: 10px;
+}
+body{
+    background: url('gori (1920x1080).jpg');
+    backdrop-filter: blur(10px);
+    height: 100%;
+}
+.todayTemp{
+width: 200px;
+height: 50px;
 }
 .hourlyForcast{
-    height: 400px;
+    height: 650px;
+}
+.fonts{
+    font-weight: 100;
+    font-style: inherit;
+}
+.Choose{
+    text-align: center;
+}
+.wind{
+    font-size: 17px;
+}
+.footer{
+    height: 50px;
 }
