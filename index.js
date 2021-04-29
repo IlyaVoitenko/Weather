@@ -98,14 +98,15 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ru&units=
     dataToday.list.length = arrayCount[0]
     dataToday.list.forEach(i=>{
          todayForcast.innerHTML+=`
-            <div>
+            <div class="todayInfo">
                 <h4  class="fonts white">${i.dt_txt.split(' ')[1]}</h4>
                 <img src="${pathImg}${i.weather[0].icon}@2x.png">
                 <h4  class="fonts white">${i.weather[0].main}</h4>
-                <h4  class="fonts white">${Math.ceil(i.main.temp)}&deg;</h4>
-                <h4  class="fonts white">${Math.ceil(i.main.feels_like)}&deg;</h4>
-                <h4  class="fonts white">${Math.ceil(i.wind.speed)}</h4>
+                <h4  class="fonts white">temp ${Math.ceil(i.main.temp)}&deg;</h4>
+                <h4  class="fonts white">feel ${Math.ceil(i.main.feels_like)}&deg;</h4>
+                <h4  class="fonts white">Wind ${Math.ceil(i.wind.speed)}</h4>
             </div>
+           
             `
     })
     console.log(dataToday.list);
@@ -114,11 +115,11 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ru&units=
     function renderFiveDay(container,day,dayOfWeek,mounth,feelTemp,img,description,id) {
         container.innerHTML+=`
         <div class="dayOfWeek" id="${id}">
-            <h2 class="fonts blue">${dayOfWeek}</h2>
-            <h3 class="fonts white">${day} ${mounth}</h3>
+            <h2 class="fonts blue ">${dayOfWeek}</h2>
+            <h3 class="fonts white ">${day} ${mounth}</h3>
             <img src="${pathImg}${img}@2x.png">
-            <h1 class="fonts white">${Math.ceil(feelTemp)}&deg;C</h1>
-            <p class="fonts white">${description}</p>
+            <h1 class="fonts white ">${Math.ceil(feelTemp)}&deg;C</h1>
+            <p class="fonts white ">${description}</p>
         </div>
         `
     }

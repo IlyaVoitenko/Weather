@@ -1,18 +1,31 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+.todayTemp{
+    height: 100px;
 }
 .todayForcast{
-    padding-top: 100px;
-    padding-right: 300px;
+    width: 100px;
 }
 .dayOfWeek{
-    width: 200px;
-    height: 350px;
+    max-width: 200px;
+    max-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.today{
+    display: flex;
+    flex-wrap: wrap;
 }
 .today div{
-    float: left;
-    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .blue{
     color: rgb(22, 97, 167);
@@ -21,44 +34,49 @@
     color: floralwhite;
 }
 .fiveDay div{
+    max-width: 300px;
     float: left;
-    padding-left: 100px;
     padding-top: 50px;
 }
 .todayForcast div{
-float: left;
+    padding-top: 20px;
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    margin-top: 20px;
+   
 }
 .hourlyForcast div{
-    float: left;
-    padding-left: 50px;
+    width: 350px;
     padding-top: 40px;
+    padding-right: 200px;
 }
 .fiveDay{
-    height: 340px;
-}
-.today{
-height: 700px;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 10px;
+
 }
 #todayImg{
-width: 200px;
-height: 100px;
+    width: 200px;
+    height: 100px;
 }
 .sumPostToday{
     width: 200px;
     height: 50px;
     padding-top: 10px;
+    margin:50px;
 }
-body{
-    background: url('gori (1920x1080).jpg');
-    backdrop-filter: blur(10px);
-    height: 100%;
+body,
+main::before {
+  background: url("gori (1920x1080).jpg") 0 / cover fixed;
+  height: 100vh;
 }
 .todayTemp{
-width: 200px;
-height: 50px;
-}
-.hourlyForcast{
-    height: 650px;
+    width: 200px;
+    height: 50px;
 }
 .fonts{
     font-weight: 100;
@@ -71,5 +89,23 @@ height: 50px;
     font-size: 17px;
 }
 .footer{
+    width: 100%;
     height: 50px;
+    position: fixed;
+    bottom:0;
 }
+
+@media (max-width:560px){
+    body{
+        height: 100%;
+    }
+}
+@media (max-width:1280px){
+    body{
+        
+        height: 100%;
+    }
+}
+
+
+
